@@ -17,7 +17,9 @@ local.properties
 /java-servlet-fpwj/Servers
 /java-servlet-fpwj/gerenciador/.settings
 /java-servlet-fpwj/gerenciador/build
-/java-servlet-fpwj/gerenciador/WebContent
+#/java-servlet-fpwj/gerenciador/WebContent
+/java-servlet-fpwj/gerenciador/WebContent/META-INF
+/java-servlet-fpwj/gerenciador/WebContent/WEB-INF
 /java-servlet-fpwj/gerenciador/.classpath
 /java-servlet-fpwj/gerenciador/.project
 
