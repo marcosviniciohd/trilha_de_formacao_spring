@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.alura.gerenciador.servlet.model.Banco;
+import br.com.alura.gerenciador.servlet.model.Empresa;
+
 
 @WebServlet("/novaEmpresa")
 public class NovaEmpresaServlet extends HttpServlet {
@@ -19,6 +22,11 @@ public class NovaEmpresaServlet extends HttpServlet {
 		System.out.println("Cadastrando nova empresa");
 		
 		String nomeEmpresa = request.getParameter("nome");
+		Empresa empresa = new Empresa();
+		empresa.setNome(nomeEmpresa);
+		
+		Banco banco = new Banco();
+		banco.adiciona(empresa);
 		
 		PrintWriter out = response.getWriter();
 		out.println("<html><body><h1>Cadastrando empresa: </h1>" +  "<h1>" + nomeEmpresa + "</h1>"  + "</body></html>");
